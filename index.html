@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Encriptador Alura Challenge</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1><img src="img/logo-r.png" alt="Logo Alura"></h1>
+        </header>
+        <main>
+            <form action="#">
+                <textarea name="texto" id="texto" cols="20" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                <p><i class="material-icons">error</i>Solo letras minusculas y sin acentos</p>
+                <section class="acciones">
+                    <input type="button"  id="boton-encriptar" value="Encriptar">
+                    <input type="button" id="boton-desencriptar" value="Desencriptar">
+                </section>
+            </form>
+            <div class="resultado">
+                <img src="img/Muñeco.png" alt="Mensaje no ingresado">
+                <h2>Ningun mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                <input type="button"  id="boton-copiar" value="Copiar">
+            </div>
+        </main>
+        <footer>Alura Challenge - spdseba</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

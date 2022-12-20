@@ -1,0 +1,231 @@
+/** Inter Google Fonts  **/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+body{
+    background-color: #f3f5fc;
+    font-family: 'Inter', sans-serif;
+}
+.contenedor{
+    margin: 16px;
+    display: grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr 1fr;
+}
+header{
+    grid-area: header;
+}
+header img{
+    position: absolute;
+    left: -20px;
+}
+main{
+    grid-area: main;
+}
+form p {
+    display: flex;
+    align-items: center;
+}
+form p i {
+    color: #67808E;
+}
+textarea {
+    font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 150%;
+max-width: 768px;
+/* identical to box height, or 48px */
+
+
+/* Dark blue/dark-blue-300 */
+
+color: #0A3871;
+    width: 100%;
+    background-color: #f3f5fc;
+    border: none;
+}
+.acciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+#boton-encriptar{
+    margin: 20px 0px;
+    padding: 24px 0px;
+    color: #FFFFFF;
+    width: 100%;
+    max-width:  332px;
+    background: #0A3871;
+    border-radius: 24px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+#boton-desencriptar{
+    padding: 24px 0px;
+    margin: 20px 0px;
+    border: 1px solid #0A3871;  
+    color: #0A3871;
+    width: 100%;
+    max-width: 332px;
+    background-color: #f3f5fc;
+    border-radius: 24px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+}
+.resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    margin: 30px 0;
+
+/* White */
+
+    background: #FFFFFF;
+    box-shadow: 10px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+.resultado img {
+    display: none;
+}
+.resultado h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+/* or 29px */
+
+text-align: center;
+
+/* Gray/gray-500 */
+
+color: #343A40;
+}
+.resultado p{
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+text-align: center;
+
+/* Gray/gray-400 */
+
+color: #495057;
+
+
+}
+#boton-copiar{
+
+    margin: 20px 0px;
+    padding: 24px 0px;
+    border: 1px solid #0A3871;  
+    color: #0A3871;
+    width: 100%;
+    background-color: #f3f5fc;
+    border-radius: 24px;
+    display: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+}
+footer{
+    background-color: #0A3871;
+    color: #FFFFFF;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px){
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 9fr 1fr;
+    }
+    textarea {
+        height: 50vh;
+        color: aqua;
+    }
+
+    form{
+        width: 100%;
+    }
+    .textarea{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 1440px){
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 10fr 1fr;
+    }
+    textarea {
+        height: 65vh;
+        color: #0A3871;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+    main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .textarea{
+        width: 100%;
+    }
+.resultado{
+    border-radius:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    -ms-border-radius:0;
+    -o-border-radius:0;
+    margin: 0;
+    width: 30%;
+}
+.resultado img{
+    display: block;
+}
+.acciones{
+    width: 100%;
+}
+#boton-desencriptar{
+    max-width: 338px;
+}
+#boton-encriptar{
+    max-width: 338px;
+}
+}
