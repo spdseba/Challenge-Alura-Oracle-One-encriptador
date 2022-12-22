@@ -20,6 +20,28 @@ header img{
     position: absolute;
     left: -20px;
 }
+.alerta{
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    width: 20%;
+    text-align: center;
+    display: none;
+}
+.alerta.exito{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    display: block;
+}
+.alerta.error{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    display: block;
+}
 main{
     grid-area: main;
 }
@@ -32,16 +54,11 @@ form p i {
 }
 textarea {
     font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 150%;
-max-width: 768px;
-/* identical to box height, or 48px */
-
-
-/* Dark blue/dark-blue-300 */
-
-color: #0A3871;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    max-width: 768px;
+    color: #0A3871;
     width: 100%;
     background-color: #f3f5fc;
     border: none;
@@ -60,8 +77,9 @@ color: #0A3871;
     width: 100%;
     max-width:  332px;
     background: #0A3871;
+    border: 1px solid #0A3871;
     border-radius: 24px;
-
+    cursor: pointer;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -69,7 +87,16 @@ color: #0A3871;
     line-height: 19px;
     text-align: center;
     color: #FFFFFF;
-
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+}
+#boton-encriptar:hover{
+    background: #AAB2D5;
+    border: 1px solid #0A3871;
+    color: #000000;
 }
 #boton-desencriptar{
     padding: 24px 0px;
@@ -80,14 +107,28 @@ color: #0A3871;
     max-width: 332px;
     background-color: #f3f5fc;
     border-radius: 24px;
-
+    cursor: pointer;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
 
+}
+#boton-desencriptar:hover{
+    background: #AAB2D5;
+    border: 1px solid #0A3871;
+    color: #000000;
+}
+#boton-desencriptar:disabled{
+    cursor: default;
+    opacity: 0.2;
 }
 .resultado{
     display: flex;
@@ -95,9 +136,6 @@ color: #0A3871;
     align-items: flex-start;
     padding: 32px;
     margin: 30px 0;
-
-/* White */
-
     background: #FFFFFF;
     box-shadow: 10px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
@@ -111,46 +149,54 @@ color: #0A3871;
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
-/* or 29px */
-
-text-align: center;
-
-/* Gray/gray-500 */
-
-color: #343A40;
+    text-align: center;
+    color: #343A40;
 }
 .resultado p{
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 150%;
-/* or 24px */
-
-text-align: center;
-
-/* Gray/gray-400 */
-
-color: #495057;
-
-
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+.resultado p.encriptado{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0A3871;
 }
 #boton-copiar{
-
     margin: 20px 0px;
     padding: 24px 0px;
-    border: 1px solid #0A3871;  
+    border: 1px solid #0A3871;
     color: #0A3871;
     width: 100%;
     background-color: #f3f5fc;
     border-radius: 24px;
-    display: none;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+}
+#boton-copiar:hover{
+    background: #AAB2D5;
+    border: 1px solid #0A3871;
+    color: #000000;
+}
+.resultado .ocultar{
+    display: none;
+}
+.resultado input .mostrar{
+    display: inline;
 }
 footer{
     background-color: #0A3871;
@@ -204,15 +250,10 @@ footer{
         width: 100%;
     }
 .resultado{
-    border-radius:0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    -webkit-border-radius:0;
-    -moz-border-radius:0;
-    -ms-border-radius:0;
-    -o-border-radius:0;
     margin: 0;
     width: 30%;
 }
